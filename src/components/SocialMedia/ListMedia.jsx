@@ -17,14 +17,11 @@ const SOCIAL_COLORS = {
 
 function ListMedia() {
   const { colorMode } = useColorMode();
-  
 
-const convert = (num) => {
-    num>10000?num=(((num/10)/10)/10)+"K":num=num/1
+  const convert = (num) => {
+    num > 10000 ? (num = num / 10 / 10 / 10 + "K") : (num = num / 1);
     return num;
-  }
-
-
+  };
 
   return (
     <Box w="70%" maxW="1400px">

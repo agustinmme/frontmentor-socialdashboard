@@ -12,25 +12,24 @@ import {
   popperCSSVars,
 } from "@chakra-ui/react";
 
-
 const SOCIAL_VALUE = {
-    "Page views": "images/icon-facebook.svg",
-    LikesF: "images/icon-facebook.svg",
-    Retweets: "images/icon-twitter.svg ",
-    LikesT: "images/icon-twitter.svg ",
-    LikesY: "images/icon-youtube.svg",
-    "Total Views": "images/icon-youtube.svg",
-    "Profile Views": "images/icon-instagram.svg",
-    LikesI: "images/icon-instagram.svg"
-  };
+  "Page views": "images/icon-facebook.svg",
+  LikesF: "images/icon-facebook.svg",
+  Retweets: "images/icon-twitter.svg ",
+  LikesT: "images/icon-twitter.svg ",
+  LikesY: "images/icon-youtube.svg",
+  "Total Views": "images/icon-youtube.svg",
+  "Profile Views": "images/icon-instagram.svg",
+  LikesI: "images/icon-instagram.svg",
+};
 
 function ListToday() {
   const { colorMode } = useColorMode();
-  
+
   const convert = (num) => {
-    num>10000?num=(((num/10)/10)/10)+"K":num=num/1
+    num > 10000 ? (num = num / 10 / 10 / 10 + "K") : (num = num / 1);
     return num;
-  }
+  };
 
   return (
     <Box w="70%" maxW="1400px">
@@ -45,7 +44,7 @@ function ListToday() {
             >
               <Stack p={5}>
                 <Flex align="center">
-                  <Text>{(item.title).slice(0, -1)}</Text>
+                  <Text>{item.title.slice(0, -1)}</Text>
                   <Spacer />
                   <Image src={SOCIAL_VALUE[item.title]} p={5}></Image>
                 </Flex>
