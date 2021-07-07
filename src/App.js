@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
+import ListToday from "./components/Overview/ListToday";
+import ListMedia from "./components/SocialMedia/ListMedia";
+import "./App.css";
+import { Stack} from "@chakra-ui/react";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Stack spacing={5}>
+      <Stack align="center">
+      <ListMedia />
+      <ListToday />
+      </Stack>
+    </Stack>
   );
 }
 

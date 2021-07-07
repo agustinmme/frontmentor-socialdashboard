@@ -1,0 +1,38 @@
+[
+    {
+      "id": 0,
+      "social": "facebook",
+      "nick": "@nathanf",
+      "num": 1987,
+      "type": "F O L L O W E R S",
+      "count":1000,
+       "red":[{"title":"Page views","num":87,"rating":3},{"title":"LikesF","num":52,"rating":-2}]
+        },
+    {
+        "id": 1,
+        "social": "twitter",
+        "nick": "@nathanf",
+        "num": 1044,
+        "type": "F O L L O W E R S",
+        "count":99,
+        "red":[{"title":"Retweets","num":117,"rating":303},{"title":"LikesT","num":507,"rating":553}]
+      },
+      {
+        "id": 2,
+        "social": "instagram",
+        "nick": "@realnathanf",
+        "num": 11000,
+        "type": "F O L L O W E R S",
+        "count":1000,
+        "red":[{"title":"LikesI","num":5462,"rating":2257},{"title":"Profile Views","num":52000,"rating":1375}]
+      },
+      {
+        "id": 3,
+        "social": "youtube",
+        "nick": "Nathan F",
+        "num": 8239,
+        "type": "S U B S C R I B E R S",
+        "count":-144,
+        "red":[{"title":"LikesY","num":107,"rating":-19},{"title":"Total Views","num":1407,"rating":-12}]
+      }
+  ]

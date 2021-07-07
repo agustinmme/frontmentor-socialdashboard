@@ -1,0 +1,91 @@
+import lista from "../../data/data.json";
+
+import { useColorMode } from "@chakra-ui/color-mode";
+import { Box, Text, Stack, Image, Heading, SimpleGrid,Flex,Spacer,Switch } from "@chakra-ui/react";
+
+const SOCIAL = {
+  facebook: "images/icon-facebook.svg",
+  twitter: "images/icon-twitter.svg ",
+  youtube: "images/icon-youtube.svg",
+  instagram: "images/icon-instagram.svg",
+};
+
+function ListMedia() {
+  const { colorMode } = useColorMode();
+  
+  const numeros = lista.map(item=>{
+    return item.num 
+})
+
+let suma = 0
+numeros.forEach(num => {
+    suma += num ;
+});
+
+const convert = (num) => {
+    num>10000?num=(((num/10)/10)/10)+"K":num=num/1
+    return num;
+  }
+
+const {  toggleColorMode } = useColorMode();
+
+  return (
+    <Box w="70%" maxW="1400px">
+      <Flex p={10}>
+        <Stack >
+          <Heading>Social Media Dashboard</Heading>
+          <Text>Total Followers: {suma}</Text>
+        </Stack>
+        <Spacer />
+        <Switch colorScheme="teal" onChange={toggleColorMode} size="lg" />
+      </Flex>
+      <SimpleGrid minChildWidth="250px" spacingX="40px" spacingY="20px">
+        {lista.map((item) => (
+          <Box
+            key={item.id}
+            borderRadius={"5"}
+            bg={colorMode === "dark" ? "gray.700" : "gray.100"}
+            borderTopWidth={3}
+            borderColor={"blue"}
+          >
+            <Stack spacing={5} p={5}>
+              <Stack
+                justifyContent="center"
+                direction={"row"}
+                spacing={2}
+                align="center"
+              >
+                <Image src={SOCIAL[item.social]} p={2}></Image>
+                <Text>{item.nick}</Text>
+              </Stack>
+              <Stack align="center">
+                <Heading size={"4xl"}>{convert(item.num)}</Heading>
+                <Text>{item.type}</Text>
+              </Stack>
+              <Stack
+                justifyContent="center"
+                direction={"row"}
+                spacing={1}
+                align="center"
+              >
+                <Image
+                  src={
+                    item.count > 0
+                      ? "images/icon-up.svg"
+                      : "images/icon-down.svg"
+                  }
+                  p={2}
+                ></Image>
+                <Text color={item.count > 0 ? "green" : "red"}>
+                  {item.count > 0 ? item.count : item.count * -1} Today
+                </Text>
+              </Stack>
+            </Stack>
+          </Box>
+        ))}
+      </SimpleGrid>
+    </Box>
+  );
+}
+
+export default ListMedia;
