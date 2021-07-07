@@ -9,6 +9,7 @@ import {
   Flex,
   Spacer,
   SimpleGrid,
+  popperCSSVars,
 } from "@chakra-ui/react";
 
 
@@ -38,13 +39,13 @@ function ListToday() {
         {lista.map((item) =>
           item.red.map((item) => (
             <Box
-              key={item}
+              key={item.title}
               borderRadius={"5"}
               bg={colorMode === "dark" ? "gray.700" : "gray.100"}
             >
               <Stack p={5}>
                 <Flex align="center">
-                  <Text>{item.title}</Text>
+                  <Text>{(item.title).slice(0, -1)}</Text>
                   <Spacer />
                   <Image src={SOCIAL_VALUE[item.title]} p={5}></Image>
                 </Flex>

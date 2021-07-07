@@ -1,7 +1,6 @@
 import lista from "../../data/data.json";
-
 import { useColorMode } from "@chakra-ui/color-mode";
-import { Box, Text, Stack, Image, Heading, SimpleGrid,Flex,Spacer,Switch } from "@chakra-ui/react";
+import { Box, Text, Stack, Image, Heading, SimpleGrid } from "@chakra-ui/react";
 
 const SOCIAL = {
   facebook: "images/icon-facebook.svg",
@@ -9,36 +8,26 @@ const SOCIAL = {
   youtube: "images/icon-youtube.svg",
   instagram: "images/icon-instagram.svg",
 };
+const SOCIAL_COLORS = {
+  facebook: "facebook.700",
+  twitter: "twitter.700",
+  youtube: "red.700",
+  instagram: "orange.300",
+};
 
 function ListMedia() {
   const { colorMode } = useColorMode();
   
-  const numeros = lista.map(item=>{
-    return item.num 
-})
-
-let suma = 0
-numeros.forEach(num => {
-    suma += num ;
-});
 
 const convert = (num) => {
     num>10000?num=(((num/10)/10)/10)+"K":num=num/1
     return num;
   }
 
-const {  toggleColorMode } = useColorMode();
+
 
   return (
     <Box w="70%" maxW="1400px">
-      <Flex p={10}>
-        <Stack >
-          <Heading>Social Media Dashboard</Heading>
-          <Text>Total Followers: {suma}</Text>
-        </Stack>
-        <Spacer />
-        <Switch colorScheme="teal" onChange={toggleColorMode} size="lg" />
-      </Flex>
       <SimpleGrid minChildWidth="250px" spacingX="40px" spacingY="20px">
         {lista.map((item) => (
           <Box
@@ -46,7 +35,7 @@ const {  toggleColorMode } = useColorMode();
             borderRadius={"5"}
             bg={colorMode === "dark" ? "gray.700" : "gray.100"}
             borderTopWidth={3}
-            borderColor={"blue"}
+            borderColor={SOCIAL_COLORS[item.social]}
           >
             <Stack spacing={5} p={5}>
               <Stack
