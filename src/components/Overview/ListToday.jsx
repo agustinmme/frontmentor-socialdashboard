@@ -8,8 +8,7 @@ import {
   Heading,
   Flex,
   Spacer,
-  SimpleGrid,
-  popperCSSVars,
+  SimpleGrid
 } from "@chakra-ui/react";
 
 const SOCIAL_VALUE = {
@@ -31,6 +30,9 @@ function ListToday() {
     return num;
   };
 
+  if(typeof lista === "undefined" || lista.length === 0){
+    return "Esto esta vacio :S"
+  }
   return (
     <Box w="70%" maxW="1400px">
       <Heading m={5}>Overview - Today</Heading>

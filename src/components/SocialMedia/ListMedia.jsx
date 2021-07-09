@@ -23,6 +23,9 @@ function ListMedia() {
     return num;
   };
 
+  if(typeof lista === "undefined" || lista.length === 0){
+    return "Esto esta vacio :S"
+  }
   return (
     <Box w="70%" maxW="1400px">
       <SimpleGrid minChildWidth="250px" spacingX="40px" spacingY="20px">
