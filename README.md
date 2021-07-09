@@ -1,4 +1,4 @@
 ### Local
 YARN START
-### DEPLOY
-https://agustinmme.github.io/frontmentor-socialdashboard/
+### Deploy:
+https://agustinmme.github.io/react-frontmentor-socialdashboard/
