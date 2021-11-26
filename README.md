@@ -25,7 +25,7 @@ You can integrate your e-commerce with StoryDots in two different ways:
 1. when a purchase is completed you will request a StoryDots code so that you can print it and include it in the gift's package. You will take care of sending your client the link so that they can record their virtual greeting (see [Simple integration](#simple-integration)).
 2. when a purchase is completed, you will let us know about the order and we will take care of sending emails to the user so that they can record their greeting. You will receive the URL for the tag image so that you can print it and include it in the package (see [Full integration](#full-integration)).
 
-### Frameworks/libreries(#simple-integration)
+### Frameworks/libreries(#frameworks-libreries)
 
 This API should be integrated in your shopping cart. Keep in mind you will be in charge of letting your users know how to record their greeting. There are two simple steps you need to follow in order to do this
 
