@@ -16,7 +16,8 @@
 ## Intro
 
 Bienvenido a la documentacion del challenge de StoryDots - Backend.
-Se trata de una api REST con Node para realizar un crud basico de productos al cual se le agrego una autenticación y algunos endpoint extras.
+Se trata de una api REST con NodeJS que pueda realizar las
+operaciones CRUD de productos con algunos extras como añadir una autenticación y unos endpoint de brands.
 
 
 ### Libreries
@@ -32,10 +33,35 @@ Las librerias utilizadas para el desarrollo de esta api fueron:
 
 ### Quick Start
 
-You will integrate with our API letting StoryDots know when there is a new order, and we will take care of sending a notification to the user so thay they can record their virtual greeting. You will just need to print the tag with the QR code and include it in the gift's package. This integration works as follows:
+  ####Local
 
-1. When a new order is placed, you will send a request to the `/order` endpoint informing us of the new purchase. You should perform this request once the purchase _is confirmed_ (this is important since every time you get a Tag code, it will be deducted from your balance).
-2. The response will include the code and the URL to the tag image with the QR code for you to print (this is the [/qr](#retrieving-qr-tag-image) endpoint documented below). You will include the printed tag in the gift's package, and we will take care of sending an email to the user to let them know they can record their virtual greeting. 
+- Configurar Variables de entorno o Crear archivo .env :
+
+Ejemplo
+
+###### DB Config
+
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=
+DB_PORT=3306
+DB_NAME=storydots
+DB_DIALECT=mysql
+
+###### Auth Config
+
+AUTH_SECRET=StoryDots
+AUTH_EXPIRE=1h
+AUTH_ROUNDS=5
+
+- Cambiar/modificar sequelize sync:
+
+Ingresar al archivo app.js y cambiar el valor de sequelize.sync()\* a true, esto forzara a que cada reinicio de la api se reinicie las bases de datos.
+
+\* app.js - linea 36:35 - await sequelize.sync({ force: FALSE/TRUE  }).authenticate();
+
+- Npm run dev
+
 
 ## Endpoints documentation
 
