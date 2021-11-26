@@ -1,13 +1,12 @@
 # StoryDots Challenge
 
 - [Intro](#intro)
-- [Frameworks/libreries](#get-storydots-for-your-online-shop)
-  - [Frameworks/libreries](#Frameworks-and-libreries)
+- [Libreries](#libreries)
+- [Quick Start](#Quick-Start)
 - [Endpoints documentation](#endpoints-documentation)
   - [Retrieving new Tag Codes](#retrieving-new-tag-codes)
   - [Retrieving QR Tag image](#retrieving-qr-tag-image)
   - [Placing a new order](#placing-a-new-order)
-- [Example code snippets](#example-code-snippets)
 - [Util](#get-storydots-for-your-online-shop)
   - [Postman](#full-integration)
 - [Need help?](#need-help)
@@ -19,20 +18,19 @@
 Bienvenido a la documentacion del challenge de StoryDots - Backend.
 Se trata de una api REST con Node para realizar un crud basico de productos al cual se le agrego una autenticación y algunos endpoint extras.
 
-## Get StoryDots for your online shop
 
-You can integrate your e-commerce with StoryDots in two different ways:
-1. when a purchase is completed you will request a StoryDots code so that you can print it and include it in the gift's package. You will take care of sending your client the link so that they can record their virtual greeting (see [Simple integration](#simple-integration)).
-2. when a purchase is completed, you will let us know about the order and we will take care of sending emails to the user so that they can record their greeting. You will receive the URL for the tag image so that you can print it and include it in the package (see [Full integration](#full-integration)).
+### Libreries
 
-### Frameworks and libreries
+Las librerias utilizadas para el desarrollo de esta api fueron:
+- Express.
+- Sequelize.
+- JSON Web Token.
+- Dotenv.
+- Bcrypt.
+- Nodemon.
 
-This API should be integrated in your shopping cart. Keep in mind you will be in charge of letting your users know how to record their greeting. There are two simple steps you need to follow in order to do this
 
-1. You should get a Tag code once the purchase _is confirmed_ (this is important since every time you get a Tag code, it will be deducted from your balance) and store the _url_ since you will need to redirect the user there so that he can upload his video (you can do it on screen, via email or both).
-2. You can use the Tag code to retrieve the QR Tag so that it can be printed and added to the gift's packaging.
-
-### Full integration
+### Quick Start
 
 You will integrate with our API letting StoryDots know when there is a new order, and we will take care of sending a notification to the user so thay they can record their virtual greeting. You will just need to print the tag with the QR code and include it in the gift's package. This integration works as follows:
 
