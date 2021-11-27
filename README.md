@@ -148,7 +148,7 @@ AUTH_ROUNDS=5
   Imagen del producto,nombre,precio,descripcion,nombre de la marca y  imagen de la misma.
 
   - **Code:** 200 <br />
-    **Content:**
+  - **Content:**
   ```
   {
   "id": ["ID"],
