@@ -197,7 +197,7 @@ Succesful response example:
   - **Code:** 400 Bad Request
   - **Content:** `{ "message": "bad request, at least one of the following params is missing: [brandId]" }`
 
-#### Sample Call:
+- **Sample Call:**
 
 ```
   curl --request POST \`_
@@ -247,7 +247,7 @@ Succesful response example:
   - **Code:** 400 Bad Request
   - **Content:** `{ "message": "ID NOT VALID ONLY NUMBER" }`
 
-#### Sample Call:
+- **Sample Call:**
 
 ```
   curl --request POST \`_
@@ -306,7 +306,7 @@ Succesful response example:
   - **Code:** 404 NOT FOUND
   - **Content:** `{ "message": "PRODUCT NOT EXIST" }`
 
-#### Sample Call:
+- **Sample Call:**
 
 ```
   curl --request PUT \`_
