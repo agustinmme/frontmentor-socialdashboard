@@ -5,11 +5,11 @@
 - [Quick Start](#Quick-Start)
 - [Endpoints de la documentacion](#endpoints-documentation)
   - [Products](#retrieving-new-tag-codes)
-  - [Recuperar todos](#retrieving-new-tag-codes)
-  - [Recuperar un producto](#retrieving-qr-tag-image)
-  - [Agregar](#placing-a-new-order)
-  - [Eliminar](#placing-a-new-order)
-  - [Modificar](#placing-a-new-order)
+    - [Recuperar todos](#retrieving-new-tag-codes)
+    - [Recuperar un producto](#retrieving-qr-tag-image)
+    - [Agregar](#placing-a-new-order)
+    - [Eliminar](#placing-a-new-order)
+    - [Modificar](#placing-a-new-order)
   - [Brands](#retrieving-new-tag-codes)
     - [Recuperar todas](#retrieving-new-tag-codes)
     - [Recuperar una marca](#retrieving-new-tag-codes)
@@ -91,14 +91,14 @@ AUTH_ROUNDS=5
 
   Este método retorna todos los productos registrados en la api.Cada vez que se llame a este metodo se enviara un array de productos junto a un contador de paginas.
 
-- **Code:** 200 <br />
-- **Content:** <br />
+    - **Code:** 200 OK<br />
+    - **Content:** <br />
     ` { "content": [ { "id": ["ID"], "name": ["NAME-PRODUCT"], "description": ["TEXT-PRODUCT"], "image_url": ["URL-IMG-PRODUCT"], "price": ["PRICE-PRODUCT"], "brand": { "name": ["NAME-BRAND"], "logo_url": ["URL-IMG"] } } ], "totalPages": ["TOTAL-PAGES"] }`
 
 - **Error Response:**
 
-- **Code:** 500 INTERNAL SERVER ERROR <br />
-- **Content:** `{ "message": "INTERNAL SERVER ERROR" }`
+    - **Code:** 500 INTERNAL SERVER ERROR <br />
+    - **Content:** `{ "message": "INTERNAL SERVER ERROR" }`
 
 - **Sample Call:**
 
@@ -128,8 +128,8 @@ AUTH_ROUNDS=5
   Este método devolverá un producto y datos de su marca asociada.
   Imagen del producto,nombre,precio,descripcion,nombre de la marca y imagen de la misma.
 
-- **Code:** 200 <br />
-- **Content:** <br />
+    - **Code:** 200 OK<br />
+    - **Content:** <br />
 
   ```
   {
@@ -144,11 +144,11 @@ AUTH_ROUNDS=5
 
 - **Error Response:**
 
-- **Code:** 404 NOT FOUND <br />
-- **Content:** `{ "message": "PRODUCT NOT EXIST" }`
+    - **Code:** 404 NOT FOUND <br />
+    - **Content:** `{ "message": "PRODUCT NOT EXIST" }`
 
-- **Code:** 400 BAD REQUEST <br />
-- **Content:** `{ "message": "ID NOT VALID ONLY NUMBER" }`
+    - **Code:** 400 BAD REQUEST <br />
+    - **Content:** `{ "message": "ID NOT VALID ONLY NUMBER" }`
 
 - **Sample Call:**
 
@@ -186,16 +186,16 @@ Este metodo devolvera un mensaje confirmando si el producto fue agregado al sist
 
 Succesful response example:
 
-- **Code:** 201 CREATED
-- **Content:** `{ "message": "YOUR PRODUCT ADDED SUCCESSFULLY" }`
+    - **Code:** 201 CREATED
+    - **Content:** `{ "message": "YOUR PRODUCT ADDED SUCCESSFULLY" }`
 
 #### Error Responses
 
-- **Code:** 401 UNAUTHORIZED
-- **Content:** `{ "mesagge": "Problem with decoded" }`
+    - **Code:** 401 UNAUTHORIZED
+    - **Content:** `{ "mesagge": "Problem with decoded" }`
 
-- **Code:** 400 Bad Request
-- **Content:** `{ "message": "bad request, at least one of the following params is missing: [brandId]" }`
+    - **Code:** 400 Bad Request
+    - **Content:** `{ "message": "bad request, at least one of the following params is missing: [brandId]" }`
 
 - **Sample Call:**
 
@@ -236,16 +236,16 @@ Este metodo devolvera un mensaje confirmando si el producto fue borrado del sist
 
 Succesful response example:
 
-- **Code:** 200 OK
-- **Content:** `{ "message": "DELETE SUCCESSFULLY" }`
+    - **Code:** 200 OK
+    - **Content:** `{ "message": "DELETE SUCCESSFULLY" }`
 
 #### Error Responses
 
-- **Code:** 401 UNAUTHORIZED
-- **Content:** `{ "mesagge": "Problem with decoded" }`
+    - **Code:** 401 UNAUTHORIZED
+    - **Content:** `{ "mesagge": "Problem with decoded" }`
 
-- **Code:** 400 Bad Request
-- **Content:** `{ "message": "ID NOT VALID ONLY NUMBER" }`
+    - **Code:** 400 Bad Request
+    - **Content:** `{ "message": "ID NOT VALID ONLY NUMBER" }`
 
 - **Sample Call:**
 
@@ -292,19 +292,19 @@ Este metodo devolvera un mensaje confirmando si el producto fue modificado corre
 
 Succesful response example:
 
-- **Code:** 200 OK
-- **Content:** `{ "message": "UPDATE SUCCESSFULLY" }`
+    - **Code:** 200 OK
+    - **Content:** `{ "message": "UPDATE SUCCESSFULLY" }`
 
 #### Error Responses
 
-- **Code:** 401 UNAUTHORIZED
-- **Content:** `{ "mesagge": "Problem with decoded" }`
+    - **Code:** 401 UNAUTHORIZED
+    - **Content:** `{ "mesagge": "Problem with decoded" }`
 
-- **Code:** 400 Bad Request
-- **Content:** `{ "message": "ID NOT VALID ONLY NUMBER" }`
+    - **Code:** 400 Bad Request
+    - **Content:** `{ "message": "ID NOT VALID ONLY NUMBER" }`
 
-- **Code:** 404 NOT FOUND
-- **Content:** `{ "message": "PRODUCT NOT EXIST" }`
+    - **Code:** 404 NOT FOUND
+    - **Content:** `{ "message": "PRODUCT NOT EXIST" }`
 
 - **Sample Call:**
 
