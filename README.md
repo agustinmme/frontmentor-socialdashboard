@@ -186,16 +186,16 @@ Este metodo devolvera un mensaje confirmando si el producto fue agregado al sist
 
 Succesful response example:
 
-    - **Code:** 201 CREATED
-    - **Content:** `{ "message": "YOUR PRODUCT ADDED SUCCESSFULLY" }`
+  - **Code:** 201 CREATED
+  - **Content:** `{ "message": "YOUR PRODUCT ADDED SUCCESSFULLY" }`
 
 #### Error Responses
 
-    - **Code:** 401 UNAUTHORIZED
-    - **Content:** `{ "mesagge": "Problem with decoded" }`
+  - **Code:** 401 UNAUTHORIZED
+  - **Content:** `{ "mesagge": "Problem with decoded" }`
 
-    - **Code:** 400 Bad Request
-    - **Content:** `{ "message": "bad request, at least one of the following params is missing: [brandId]" }`
+  - **Code:** 400 Bad Request
+  - **Content:** `{ "message": "bad request, at least one of the following params is missing: [brandId]" }`
 
 - **Sample Call:**
 
@@ -236,16 +236,16 @@ Este metodo devolvera un mensaje confirmando si el producto fue borrado del sist
 
 Succesful response example:
 
-    - **Code:** 200 OK
-    - **Content:** `{ "message": "DELETE SUCCESSFULLY" }`
+  - **Code:** 200 OK
+  - **Content:** `{ "message": "DELETE SUCCESSFULLY" }`
 
 #### Error Responses
 
-    - **Code:** 401 UNAUTHORIZED
-    - **Content:** `{ "mesagge": "Problem with decoded" }`
+  - **Code:** 401 UNAUTHORIZED
+  - **Content:** `{ "mesagge": "Problem with decoded" }`
 
-    - **Code:** 400 Bad Request
-    - **Content:** `{ "message": "ID NOT VALID ONLY NUMBER" }`
+  - **Code:** 400 Bad Request
+  - **Content:** `{ "message": "ID NOT VALID ONLY NUMBER" }`
 
 - **Sample Call:**
 
@@ -292,19 +292,19 @@ Este metodo devolvera un mensaje confirmando si el producto fue modificado corre
 
 Succesful response example:
 
-    - **Code:** 200 OK
-    - **Content:** `{ "message": "UPDATE SUCCESSFULLY" }`
+  - **Code:** 200 OK
+  - **Content:** `{ "message": "UPDATE SUCCESSFULLY" }`
 
 #### Error Responses
 
-    - **Code:** 401 UNAUTHORIZED
-    - **Content:** `{ "mesagge": "Problem with decoded" }`
+  - **Code:** 401 UNAUTHORIZED
+  - **Content:** `{ "mesagge": "Problem with decoded" }`
 
-    - **Code:** 400 Bad Request
-    - **Content:** `{ "message": "ID NOT VALID ONLY NUMBER" }`
+  - **Code:** 400 Bad Request
+  - **Content:** `{ "message": "ID NOT VALID ONLY NUMBER" }`
 
-    - **Code:** 404 NOT FOUND
-    - **Content:** `{ "message": "PRODUCT NOT EXIST" }`
+  - **Code:** 404 NOT FOUND
+  - **Content:** `{ "message": "PRODUCT NOT EXIST" }`
 
 - **Sample Call:**
 
