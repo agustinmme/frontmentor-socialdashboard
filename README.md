@@ -96,8 +96,8 @@ AUTH_ROUNDS=5
 
   Este método retorna todos los productos registrados en la api.Cada vez que se llame a este metodo se enviara un array de productos junto a un contador de paginas.
 
-  - **Code:** 200 <br />
-    **Content:** 
+ - **Code:** 200 <br />
+ - **Content:** <br />
 	```
 	{
 	"content": [
@@ -147,8 +147,8 @@ AUTH_ROUNDS=5
   Este método devolverá un producto y datos de su marca asociada.
   Imagen del producto,nombre,precio,descripcion,nombre de la marca y  imagen de la misma.
 
-  - **Code:** 200 <br />
-  - **Content:**
+ - **Code:** 200 <br />
+ - **Content:** <br />
   ```
   {
   "id": ["ID"],
