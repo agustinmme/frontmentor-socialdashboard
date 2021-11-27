@@ -149,7 +149,8 @@ AUTH_ROUNDS=5
 
   - **Code:** 200 <br />
     **Content:**
-  ```{
+  ```
+  {
   "id": ["ID"],
   "name": ["NAME-PRODUCT"],
   "description": ["TEXT-PRODUCT"],
