@@ -156,7 +156,8 @@ AUTH_ROUNDS=5
   "image_url": ["URL-IMG-PRODUCT"],
   "price": ["PRICE-PRODUCT"],
   "brand": { "name": ["NAME-BRAND"], "logo_url": ["URL-IMG"] }
-  }```
+  }
+  ```
 
 - **Error Response:**
 
@@ -169,7 +170,7 @@ AUTH_ROUNDS=5
 - **Sample Call:**
 
   _`curl -X GET \`_  
-  _``http://localhost:3000/products/[ID-PRODUCT] \`_  
+  _`http://localhost:3000/products/[ID-PRODUCT] \`_  
 
 
 ### Agregar nuevo productos
