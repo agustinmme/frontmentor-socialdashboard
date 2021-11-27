@@ -99,7 +99,7 @@ AUTH_ROUNDS=5
   - **Code:** 200 <br />
     **Content:** 
 	```
-	`{
+	{
 	"content": [
     {
       "id": ["ID"],
@@ -111,7 +111,7 @@ AUTH_ROUNDS=5
     }
   ],
   "totalPages": ["TOTAL-PAGES"]
-}````
+}```
 
 - **Error Response:**
 
@@ -149,16 +149,15 @@ AUTH_ROUNDS=5
 
   - **Code:** 200 <br />
     **Content:**
-	```
-    `{
+  ```{
   "id": ["ID"],
   "name": ["NAME-PRODUCT"],
   "description": ["TEXT-PRODUCT"],
   "image_url": ["URL-IMG-PRODUCT"],
   "price": ["PRICE-PRODUCT"],
   "brand": { "name": ["NAME-BRAND"], "logo_url": ["URL-IMG"] }
-}`
-```
+  }```
+
 - **Error Response:**
 
   - **Code:** 404 NOT FOUND <br />
