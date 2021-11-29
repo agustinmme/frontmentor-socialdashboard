@@ -2,8 +2,8 @@
 
 - [Intro](#intro)
 - [Librerias](#libreries)
-- [Quick Start](#Quick-Start)
-- [Endpoints de la documentacion](#endpoints-documentation)
+- [Quick Start](#quick-start)
+- [Endpoints de la documentacion](#endpoints-products)
  	- [Products](#retrieving-new-tag-codes)
 	  - [Recuperar todos](#retrieving-new-tag-codes)
 	  - [Recuperar un producto](#retrieving-qr-tag-image)
