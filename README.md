@@ -69,9 +69,6 @@ AUTH_ROUNDS=5
 \* El repositorio contiene un JSON para importar en Postman con los endpoints.
 
 
-
-
-
 ## Endpoints Products 
 
 ### **Recuperar todos los productos**
@@ -121,9 +118,6 @@ AUTH_ROUNDS=5
   - **Code:** 500 INTERNAL SERVER ERROR <br />
     **Content:** <br/> `{ "message": "INTERNAL SERVER ERROR" }`
 
-<br/>    
-- [MAS ERRORES](#other-errors)
-<br/>
 
 - **Sample Call:**
 
@@ -176,9 +170,6 @@ AUTH_ROUNDS=5
   - **Code:** 404 NOT FOUND <br />
     **Content:** <br/> `{ "message": "PRODUCT NOT EXIST" }`
 
-<br/>    
-- [MAS ERRORES](#other-errors)
-<br/>
 
 - **Sample Call:**
 
@@ -234,15 +225,19 @@ AUTH_ROUNDS=5
     `{ "message": "JWT MALFORMED " }`<br/>
     `{ "message": "JWT EXPIRED " }`<br/>
 
-<br/>    
-- [MAS ERRORES](#other-errors)
-<br/>
+  - **Code:** 500 INTERNAL SERVER ERROR <br />
+    **Content:** <br/> 
+    `{ "message": "NAME PRODUCT ONLY ALLOW VALUES WITH LENGTH BETWEEN 3 AND 60" }`<br/> 
+    `{ "message": "NAME PRODUCT ONLY ALLOW VALUES WITH LETTER AND NUMBER" }`<br/> 
+    `{ "message": "PRODUCT DESCRIPTION ONLY ALLOWS VALUES WITH LENGTH LESS THAN 150" }`<br/> 
+    `{ "message": "PRODUCT IMAGE ONLY ALLOW VALUES WITH LENGTH BETWEEN 5 AND 255" }`<br/> 
+
 
 - **Sample Call:**
 
 	```
 	curl --request POST 
-	--url 'http://localhost:3000/products/new'\
+	--url 'http://localhost:3000/products/new'
 	--header 'Authorization: Bearer  [YOUR-TOKEN]
 	--data '{
 	"name": "Ratona Mascardi Miami Negro",
@@ -294,16 +289,13 @@ AUTH_ROUNDS=5
   - **Code:** 404 NOT FOUND <br/>
     **Content:** <br/>`{ "message": "PRODUCT NOT EXIST" }`
 
-<br/>    
-- [MAS ERRORES](#other-errors)
-<br/>
 
 - **Sample Call:**
 
 ```
-  curl --request POST \`_
-    --url 'http://localhost:3000/products/[ID-PRODUCT]'\
-    --header 'Authorization: Bearer  [YOUR-TOKEN] '\
+  curl --request POST 
+    --url 'http://localhost:3000/products/[ID-PRODUCT]'
+    --header 'Authorization: Bearer  [YOUR-TOKEN] '
 ```
 ### Modificar un producto
 
@@ -359,16 +351,20 @@ Estos son los parámetros que esperará el end-point:
   - **Code:** 404 NOT FOUND <br/>
     **Content:** <br/> `{ "message": "PRODUCT NOT EXIST" }`
 
-<br/>    
-- [MAS ERRORES](#other-errors)
-<br/>
+  - **Code:** 500 INTERNAL SERVER ERROR <br />
+    **Content:** <br/> 
+    `{ "message": "NAME PRODUCT ONLY ALLOW VALUES WITH LENGTH BETWEEN 3 AND 60" }`<br/> 
+    `{ "message": "NAME PRODUCT ONLY ALLOW VALUES WITH LETTER AND NUMBER" }`<br/> 
+    `{ "message": "PRODUCT DESCRIPTION ONLY ALLOWS VALUES WITH LENGTH LESS THAN 150" }`<br/> 
+    `{ "message": "PRODUCT IMAGE ONLY ALLOW VALUES WITH LENGTH BETWEEN 5 AND 255" }`<br/> 
+
 
 - **Sample Call:**
 
 ```
-  curl --request PUT \`_
-    --url 'http://localhost:3000/products/[ID-PRODUCT]'\
-    --header 'Authorization: Bearer  [YOUR-TOKEN] '\
+  curl --request PUT 
+    --url 'http://localhost:3000/products/[ID-PRODUCT]
+    --header 'Authorization: Bearer  [YOUR-TOKEN] 
 	--data '{
       "name": "Ratona Mascardi Miami Negro",
       "description": "4 Sillon Miami Negra 1 Mesita Ratona Mascardi",
@@ -376,9 +372,9 @@ Estos son los parámetros que esperará el end-point:
 ```
 o
 ```
-  curl --request PUT \`_
-    --url 'http://localhost:3000/products/[ID-PRODUCT]'\
-    --header 'Authorization: Bearer  [YOUR-TOKEN] '\
+  curl --request PUT 
+    --url 'http://localhost:3000/products/[ID-PRODUCT]
+    --header 'Authorization: Bearer  [YOUR-TOKEN] 
 	--data '{
       "name": "Ratona Mascardi Miami Negro",
       "description": "4 Sillon Miami Negra 1 Mesita Ratona Mascardi",
@@ -429,9 +425,6 @@ o
    - **Code:** 500 INTERNAL SERVER ERROR <br />
      **Content:** <br/> `{ "message": "INTERNAL SERVER ERROR" }`
 
-<br/>    
-- [MAS ERRORES](#other-errors)
-<br/>
 
 - **Sample Call:**
 
@@ -480,9 +473,6 @@ o
   - **Code:** 404 NOT FOUND <br />
     **Content:** <br/> `{ "message": "BRAND NOT EXIST" }`
 
-<br/>    
-- [MAS ERRORES](#other-errors)
-<br/>
 
 - **Sample Call:**
 
@@ -534,16 +524,20 @@ o
     `{ "message": "JWT MALFORMED " }`<br/>
     `{ "message": "JWT EXPIRED " }`<br/>
     
-<br/>    
-- [MAS ERRORES](#other-errors)
-<br/>
+  - **Code:** 500 INTERNAL SERVER ERROR <br />
+    **Content:** <br/> 
+    `{ "message": "LOGO BRAND ONLY ALLOW VALUES WITH LENGTH BETWEEN 5 AND 255" }`<br/> 
+    `{ "message": "NAME BRAND ONLY ALLOW VALUES WITH LETTER AND NUMBER" }`<br/> 
+    `{ "message": "NAME BRAND ONLY ALLOW VALUES WITH LENGTH BETWEEN 3 AND 60" }`<br/> 
+    `{ "message": "PLEASE ENTRE SOLO URL. FORMAT EXAMPLE : (HTTP://FOO.COM)" }`<br/> 
+    
 
 - **Sample Call:**
 
 	```
-	curl --request POST \
-	--url 'http://localhost:3000/brands/new' \
-	--header 'Authorization: Bearer  [YOUR-TOKEN] \
+	curl --request POST 
+	--url 'http://localhost:3000/brands/new' 
+	--header 'Authorization: Bearer  [YOUR-TOKEN] 
 	--data '{
 	"name": "cocaCola",
         "logo_url":"https://picsum.photos/id/237/200/300"
@@ -591,16 +585,14 @@ o
     
   - **Code:** 404 NOT FOUND <br/>
     **Content:** <br/> `{ "message": "BRAND NOT EXIST" }`
-<br/>    
-- [MAS ERRORES](#other-errors)
-<br/>
+
 
 - **Sample Call:**
 
 ```
-  curl --request POST \`_
-    --url 'http://localhost:3000/brands/[ID-BRAND]'\
-    --header 'Authorization: Bearer  [YOUR-TOKEN] '\
+  curl --request POST 
+    --url 'http://localhost:3000/brands/[ID-BRAND]'
+    --header 'Authorization: Bearer  [YOUR-TOKEN] '
 ```
 
 ### Modificar marca
@@ -651,27 +643,31 @@ Estos son los parámetros que esperará el end-point:
     `{ "message": "JWT MALFORMED " }`<br/>
     `{ "message": "JWT EXPIRED " }`<br/>
 
-
+  - **Code:** 500 INTERNAL SERVER ERROR <br />
+    **Content:** <br/> 
+    `{ "message": "LOGO BRAND ONLY ALLOW VALUES WITH LENGTH BETWEEN 5 AND 255" }`<br/> 
+    `{ "message": "NAME BRAND ONLY ALLOW VALUES WITH LETTER AND NUMBER" }`<br/> 
+    `{ "message": "NAME BRAND ONLY ALLOW VALUES WITH LENGTH BETWEEN 3 AND 60" }`<br/> 
+    `{ "message": "PLEASE ENTRE SOLO URL. FORMAT EXAMPLE : (HTTP://FOO.COM)" }`<br/> 
+    
   - **Code:** 404 NOT FOUND <br/>
     **Content:** <br/> `{ "message": "BRAND NOT EXIST" }` 
-<br/>    
-- [MAS ERRORES](#other-errors)
-<br/>
+
 - **Sample Call:**
 
 ```
-  curl --request PUT \`_
-    --url 'http://localhost:3000/brands/[ID-BRAND]'\
-    --header 'Authorization: Bearer  [YOUR-TOKEN] '\
+  curl --request PUT 
+    --url 'http://localhost:3000/brands/[ID-BRAND]'
+    --header 'Authorization: Bearer  [YOUR-TOKEN] '
 	--data '{
       "name": "villavicencio",
     }'
 ```
 o
 ```
-  curl --request PUT \`_
-    --url 'http://localhost:3000/brands/[ID-BRAND]'\
-    --header 'Authorization: Bearer  [YOUR-TOKEN] '\
+  curl --request PUT 
+    --url 'http://localhost:3000/brands/[ID-BRAND]'
+    --header 'Authorization: Bearer  [YOUR-TOKEN] '
 	--data '{
       "name": "coca cola",
       "logo_url": "https://picsum.photos/id/237/200/300",
@@ -719,6 +715,11 @@ o
   - **Code:** 400 BAD REQUEST <br />
     **Content:** <br/> `{ "message": "PASSWORD ONLY ALLOW VALUES WITH LENGTH BETWEEN 5 AND 60" }`
 		<br/> `{ "message": "BAD REQUEST, AT LEAST ONE OF THE FOLLOWING PARAMS IS MISSING: [EMAIL],[PASSWORD]" }`
+		
+  - **Code:** 500 INTERNAL SERVER ERROR <br />
+    **Content:** <br/> 
+    `{ "message": "EMAIL ALREADY IN USE!" }`<br/> 
+    `{ "message": "EMAIL ONLY ALLOW VALUES TYPE OF MAILS" }`<br/> 
 
 <br/>    
 - [MAS ERRORES](#other-errors)
@@ -766,9 +767,11 @@ o
   - **Code:** 404 NOT FOUND <br />
     **Content:** <br/> `{ "message": "EMAIL/USER NOT EXIST" }`
 
-<br/>    
-- [MAS ERRORES](#other-errors)
-<br/>
+  - **Code:** 500 INTERNAL SERVER ERROR <br />
+    **Content:** <br/> 
+    `{ "message": "EMAIL ALREADY IN USE!" }`<br/> 
+    `{ "message": "EMAIL ONLY ALLOW VALUES TYPE OF MAILS" }`<br/> 
+
 
 - **Sample Call:**
 
@@ -778,19 +781,6 @@ o
 	```
 <br/>
 
-### **Other errors**
-  - **Code:** 500 INTERNAL SERVER ERROR <br />
-    **Content:** <br/> 
-    `{ "message": "EMAIL ALREADY IN USE!" }`<br/> 
-    `{ "message": "EMAIL ONLY ALLOW VALUES TYPE OF MAILS" }`<br/> 
-    `{ "message": "NAME PRODUCT ONLY ALLOW VALUES WITH LENGTH BETWEEN 3 AND 60" }`<br/> 
-    `{ "message": "NAME PRODUCT ONLY ALLOW VALUES WITH LETTER AND NUMBER" }`<br/> 
-    `{ "message": "PRODUCT DESCRIPTION ONLY ALLOWS VALUES WITH LENGTH LESS THAN 150" }`<br/> 
-    `{ "message": "PRODUCT IMAGE ONLY ALLOW VALUES WITH LENGTH BETWEEN 5 AND 255" }`<br/> 
-    `{ "message": "PLEASE ENTRE SOLO URL. FORMAT EXAMPLE : (HTTP://FOO.COM)" }`<br/> 
-    `{ "message": "LOGO BRAND ONLY ALLOW VALUES WITH LENGTH BETWEEN 5 AND 255" }`<br/> 
-    `{ "message": "NAME BRAND ONLY ALLOW VALUES WITH LETTER AND NUMBER" }`<br/> 
-    `{ "message": "NAME BRAND ONLY ALLOW VALUES WITH LENGTH BETWEEN 3 AND 60" }`<br/> 
 
 
 ## **Example code snippets**
