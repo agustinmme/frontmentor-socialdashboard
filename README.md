@@ -2,7 +2,7 @@
 
 - [Intro](#intro)
 - [Librerias](#libreries)
-- [Quick Start](#quick-start)
+- [Quick Start](#Quick-Start)
 - [Endpoints de la documentacion](#endpoints-documentation)
  	- [Products](#retrieving-new-tag-codes)
 	  - [Recuperar todos](#retrieving-new-tag-codes)
@@ -122,7 +122,7 @@ AUTH_ROUNDS=5
     **Content:** <br/> `{ "message": "INTERNAL SERVER ERROR" }`
 
 <br/>    
-- [Otros errors](#other-errors)
+- [MAS ERRORES](#other-errors)
 <br/>
 
 - **Sample Call:**
@@ -177,7 +177,7 @@ AUTH_ROUNDS=5
     **Content:** <br/> `{ "message": "PRODUCT NOT EXIST" }`
 
 <br/>    
-- [Otros errors](#other-errors)
+- [MAS ERRORES](#other-errors)
 <br/>
 
 - **Sample Call:**
@@ -235,7 +235,7 @@ AUTH_ROUNDS=5
     `{ "message": "JWT EXPIRED " }`<br/>
 
 <br/>    
-- [Otros errors](#other-errors)
+- [MAS ERRORES](#other-errors)
 <br/>
 
 - **Sample Call:**
@@ -295,7 +295,7 @@ AUTH_ROUNDS=5
     **Content:** <br/>`{ "message": "PRODUCT NOT EXIST" }`
 
 <br/>    
-- [Otros errors](#other-errors)
+- [MAS ERRORES](#other-errors)
 <br/>
 
 - **Sample Call:**
@@ -360,7 +360,7 @@ Estos son los parámetros que esperará el end-point:
     **Content:** <br/> `{ "message": "PRODUCT NOT EXIST" }`
 
 <br/>    
-- [Otros errors](#other-errors)
+- [MAS ERRORES](#other-errors)
 <br/>
 
 - **Sample Call:**
@@ -430,7 +430,7 @@ o
      **Content:** <br/> `{ "message": "INTERNAL SERVER ERROR" }`
 
 <br/>    
-- [Otros errors](#other-errors)
+- [MAS ERRORES](#other-errors)
 <br/>
 
 - **Sample Call:**
@@ -481,7 +481,7 @@ o
     **Content:** <br/> `{ "message": "BRAND NOT EXIST" }`
 
 <br/>    
-- [Otros errors](#other-errors)
+- [MAS ERRORES](#other-errors)
 <br/>
 
 - **Sample Call:**
@@ -535,7 +535,7 @@ o
     `{ "message": "JWT EXPIRED " }`<br/>
     
 <br/>    
-- [Otros errors](#other-errors)
+- [MAS ERRORES](#other-errors)
 <br/>
 
 - **Sample Call:**
@@ -592,7 +592,7 @@ o
   - **Code:** 404 NOT FOUND <br/>
     **Content:** <br/> `{ "message": "BRAND NOT EXIST" }`
 <br/>    
-- [Otros errors](#other-errors)
+- [MAS ERRORES](#other-errors)
 <br/>
 
 - **Sample Call:**
@@ -655,7 +655,7 @@ Estos son los parámetros que esperará el end-point:
   - **Code:** 404 NOT FOUND <br/>
     **Content:** <br/> `{ "message": "BRAND NOT EXIST" }` 
 <br/>    
-- [Otros errors](#other-errors)
+- [MAS ERRORES](#other-errors)
 <br/>
 - **Sample Call:**
 
@@ -721,7 +721,7 @@ o
 		<br/> `{ "message": "BAD REQUEST, AT LEAST ONE OF THE FOLLOWING PARAMS IS MISSING: [EMAIL],[PASSWORD]" }`
 
 <br/>    
-- [Otros errors](#other-errors)
+- [MAS ERRORES](#other-errors)
 <br/>
 
 - **Sample Call:**
@@ -767,7 +767,7 @@ o
     **Content:** <br/> `{ "message": "EMAIL/USER NOT EXIST" }`
 
 <br/>    
-- [Otros errors](#other-errors)
+- [MAS ERRORES](#other-errors)
 <br/>
 
 - **Sample Call:**
@@ -781,16 +781,16 @@ o
 ### **Other errors**
   - **Code:** 500 INTERNAL SERVER ERROR <br />
     **Content:** <br/> 
-    `{ "message": "EMAIL ALREADY IN USE!" }`
-    `{ "message": "EMAIL ONLY ALLOW VALUES TYPE OF MAILS" }`
-    `{ "message": "NAME PRODUCT ONLY ALLOW VALUES WITH LENGTH BETWEEN 3 AND 60" }`
-    `{ "message": "NAME PRODUCT ONLY ALLOW VALUES WITH LETTER AND NUMBER" }`
-    `{ "message": "PRODUCT DESCRIPTION ONLY ALLOWS VALUES WITH LENGTH LESS THAN 150" }`
-    `{ "message": "PRODUCT IMAGE ONLY ALLOW VALUES WITH LENGTH BETWEEN 5 AND 255" }`
-    `{ "message": "PLEASE ENTRE SOLO URL. FORMAT EXAMPLE : (HTTP://FOO.COM)" }`
-    `{ "message": "LOGO BRAND ONLY ALLOW VALUES WITH LENGTH BETWEEN 5 AND 255" }`
-    `{ "message": "NAME BRAND ONLY ALLOW VALUES WITH LETTER AND NUMBER" }`
-    `{ "message": "NAME BRAND ONLY ALLOW VALUES WITH LENGTH BETWEEN 3 AND 60" }`
+    `{ "message": "EMAIL ALREADY IN USE!" }`<br/> 
+    `{ "message": "EMAIL ONLY ALLOW VALUES TYPE OF MAILS" }`<br/> 
+    `{ "message": "NAME PRODUCT ONLY ALLOW VALUES WITH LENGTH BETWEEN 3 AND 60" }`<br/> 
+    `{ "message": "NAME PRODUCT ONLY ALLOW VALUES WITH LETTER AND NUMBER" }`<br/> 
+    `{ "message": "PRODUCT DESCRIPTION ONLY ALLOWS VALUES WITH LENGTH LESS THAN 150" }`<br/> 
+    `{ "message": "PRODUCT IMAGE ONLY ALLOW VALUES WITH LENGTH BETWEEN 5 AND 255" }`<br/> 
+    `{ "message": "PLEASE ENTRE SOLO URL. FORMAT EXAMPLE : (HTTP://FOO.COM)" }`<br/> 
+    `{ "message": "LOGO BRAND ONLY ALLOW VALUES WITH LENGTH BETWEEN 5 AND 255" }`<br/> 
+    `{ "message": "NAME BRAND ONLY ALLOW VALUES WITH LETTER AND NUMBER" }`<br/> 
+    `{ "message": "NAME BRAND ONLY ALLOW VALUES WITH LENGTH BETWEEN 3 AND 60" }`<br/> 
 
 
 ## **Example code snippets**
