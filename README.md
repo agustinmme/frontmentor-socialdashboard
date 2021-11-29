@@ -4,23 +4,23 @@
 - [Librerias](#libreries)
 - [Quick Start](#quick-start)
 - [Endpoints de la documentacion](#endpoints-products)
- 	- [Products](#retrieving-new-tag-codes)
-	  - [Recuperar todos](#retrieving-new-tag-codes)
-	  - [Recuperar un producto](#retrieving-qr-tag-image)
-	  - [Agregar](#placing-a-new-order)
-	  - [Eliminar](#placing-a-new-order)
-	  - [Modificar](#placing-a-new-order)
- 	- [Brands](#retrieving-new-tag-codes)
-		 - [Recuperar todas](#retrieving-new-tag-codes)
-		 - [Recuperar una marca](#retrieving-new-tag-codes)
-		 - [Agregar](#retrieving-new-tag-codes)
-		 - [Eliminar](#retrieving-new-tag-codes)
-		 - [Modificar](#placing-a-new-order)
- 	- [User](#retrieving-new-tag-codes)
-		 - [Register](#retrieving-new-tag-codes)
-		 - [Login](#retrieving-new-tag-codes)
-- [Ejemplos - Code snippets](#get-storydots-for-your-online-shop)
-- [¿Necesitas ayuda?](#need-help)
+ 	- [Products](#endpoints-products)
+	  - [Recuperar todos](#recuperar-todos-los-productos)
+	  - [Recuperar un producto](#recuperar-un-producto)
+	  - [Agregar](#agregar-nuevo-productos)
+	  - [Eliminar](#eliminar-producto)
+	  - [Modificar](#modificar-un-producto)
+ 	- [Brands](#endpoints-brands)
+		 - [Recuperar todas](#recuperar-todos-las-marcas)
+		 - [Recuperar una marca](#recuperar-una-marca)
+		 - [Agregar](#agregar-nueva-marca)
+		 - [Eliminar](#eliminar-marca)
+		 - [Modificar](#modificar-marca)
+ 	- [User](#endpoints-user)
+		 - [Register](#registar)
+		 - [Login](#logear)
+- [Ejemplos - Code snippets](#example-code-snippets)
+- [¿Necesitas ayuda?](#necesitas-ayuda)
 
 ---
 
@@ -179,7 +179,7 @@ AUTH_ROUNDS=5
 	```
 <br/>
 
-### Agregar nuevo productos
+### Agregar nuevo productos 
 
 - **URL**
 
@@ -249,7 +249,7 @@ AUTH_ROUNDS=5
 	```
 	<br/>
 	
-### Eliminar producto
+### Eliminar producto 
 
 - **URL**
 
@@ -297,7 +297,7 @@ AUTH_ROUNDS=5
     --url 'http://localhost:3000/products/[ID-PRODUCT]'
     --header 'Authorization: Bearer  [YOUR-TOKEN] '
 ```
-### Modificar un producto
+### Modificar un producto 
 
 - **URL**
 
@@ -386,7 +386,7 @@ o
 
 ## Endpoints Brands 
 
-### **Recuperar todos las marcas**
+### **Recuperar todos las marcas** 
 
 - **URL**
 
@@ -434,7 +434,7 @@ o
 	```
 <br/>
 
-### **Recuperar una marca**
+### **Recuperar una marca** 
 
 - **URL**
 
@@ -482,7 +482,7 @@ o
 	```
 <br/>
 
-### Agregar nueva marca
+### Agregar nueva marca 
 
 - **URL**
 
@@ -545,7 +545,7 @@ o
 	```
 	<br/>
 	
-### Eliminar marca
+### Eliminar marca 
 
 - **URL**
 
@@ -595,7 +595,7 @@ o
     --header 'Authorization: Bearer  [YOUR-TOKEN] '
 ```
 
-### Modificar marca
+### Modificar marca 
 
 - **URL**
 
@@ -677,7 +677,7 @@ o
 
 ## Endpoints User 
 
-### **Registar**
+### **Registar** 
 
 - **URL**
 
@@ -721,9 +721,6 @@ o
     `{ "message": "EMAIL ALREADY IN USE!" }`<br/> 
     `{ "message": "EMAIL ONLY ALLOW VALUES TYPE OF MAILS" }`<br/> 
 
-<br/>    
-- [MAS ERRORES](#other-errors)
-<br/>
 
 - **Sample Call:**
 
@@ -733,7 +730,7 @@ o
 	```
 <br/>
 
-### **Logear**
+### **Logear** 
 
 - **URL**
 
@@ -788,6 +785,6 @@ o
 El repositorio cuenta con un folder(**Postman - Queries**) que con tiene un archivo JSON para importar los endpoints con ejemplos en [Postman](https://www.postman.com/downloads/?utm_source=postman-home)
 
 
-## ¿Necesitas ayuda?
+## ¿Necesitas ayuda? 
 
 Para cualquier pregunta, envíe un correo electrónico a agustinmansilla240@gmail.com y te ayudare :)
